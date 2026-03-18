@@ -1,0 +1,21 @@
+.logo {
+
+  --ds-logo-color: var(--ds-color-semantic-background-accent);
+  --ds-logo-color-blank: var(--ds-color-semantic-foreground-primary-inverted);
+  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.logoIcon {
+  width: 100%;
+  height: 100%;
+  fill: var(--ds-logo-color);
+}
+
+.logoBlank .logoIcon {
+  fill: var(--ds-logo-color-blank);
+}

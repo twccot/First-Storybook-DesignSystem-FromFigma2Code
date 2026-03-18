@@ -1,0 +1,27 @@
+:root {
+  /* Tier 1 */
+  /* Font Family */
+  --ds-typography-global-fontFamily: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  
+  /* Font Sizes */
+  --ds-typography-global-fontSize-small: 0.75rem;   /* 12px */
+  --ds-typography-global-fontSize-base: 1rem;        /* 16px */
+  --ds-typography-global-fontSize-large: 1.25rem;    /* 20px */
+  --ds-typography-global-fontSize-xl: 1.5rem;       /* 24px */
+
+  /* Line Heights */
+  --ds-typography-global-lineHeight-tight: 1.25;
+  --ds-typography-global-lineHeight-normal: 1.5;
+  --ds-typography-global-lineHeight-relaxed: 1.75;
+
+  /* Font Weights */
+  --ds-typography-global-fontWeight-normal: 400;
+  --ds-typography-global-fontWeight-bold: 600;
+
+  /* Tier 2 */
+  /* Label Typography */
+  --ds-typography-label-fontSize: var(--ds-typography-global-fontSize-small);
+  --ds-typography-label-lineHeight: var(--ds-typography-global-lineHeight-normal);
+  --ds-typography-label-fontWeight: var(--ds-typography-global-fontWeight-normal);
+}
+

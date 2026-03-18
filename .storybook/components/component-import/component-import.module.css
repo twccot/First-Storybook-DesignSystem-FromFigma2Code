@@ -1,0 +1,10 @@
+@import '../../styles/foundation.css';
+
+.storySource button {
+  border-color: #e0e0e0;
+  font-family: "Noto Sans", "Nunito Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17.5px;
+}
+

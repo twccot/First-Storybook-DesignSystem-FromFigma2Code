@@ -1,0 +1,18 @@
+:root {
+  /* Tier 1 */
+  --ds-space-global-x0: 0px;
+  --ds-space-global-atom: 1px;
+  --ds-space-global-xhalf: 4px;
+  --ds-space-global-x1: 8px;
+  --ds-space-global-x2: 16px;
+  --ds-space-global-x3: 24px;
+  --ds-space-global-x4: 32px;
+  --ds-space-global-x5: 48px;
+
+  /* Tier 2 */
+  --ds-space-padding-s: var(--ds-space-global-xhalf);
+  --ds-space-padding-m: var(--ds-space-global-x1);
+  --ds-space-padding-l: var(--ds-space-global-x2);
+  --ds-space-padding-xl: var(--ds-space-global-x3);
+}
+

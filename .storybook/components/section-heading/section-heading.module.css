@@ -1,0 +1,21 @@
+@import '../../styles/foundation.css';
+
+.heading {
+  color: var(--text-primary-light) !important;
+  font-family: var(--font-body) !important;
+  font-weight: var(--bold);
+  text-align: left;
+  font-size: var(--scale6) !important;
+  line-height: var(--scale8);
+  letter-spacing: -0.48px;
+  text-transform: capitalize;
+  padding-bottom: var(--space-4) !important;
+  margin-top: var(--space-7) !important;
+  margin-bottom: var(--space-4) !important;
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.heading:first-of-type {
+  margin-top: var(--space-7) !important;
+}
+

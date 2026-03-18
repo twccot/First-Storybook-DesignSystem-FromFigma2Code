@@ -1,0 +1,73 @@
+.tabs {
+
+  --ds-tabs-background: var(--ds-color-semantic-background-primary);
+  --ds-tabs-trigger-background: transparent;
+  --ds-tabs-trigger-background-active: var(--ds-color-semantic-background-primary);
+  --ds-tabs-trigger-background-hover: var(--ds-color-semantic-background-primary);
+  --ds-tabs-trigger-label-color: var(--ds-color-semantic-foreground-secondary);
+  --ds-tabs-trigger-label-color-active: var(--ds-color-semantic-foreground-secondary);
+  --ds-tabs-content-label-color: var(--ds-color-semantic-foreground-secondary);
+  --ds-tabs-border-color: var(--ds-color-global-neutral-800);
+  
+  --ds-tabs-label-fontSize: var(--ds-typography-label-fontSize);
+  --ds-tabs-label-lineHeight: var(--ds-typography-label-lineHeight);
+  --ds-tabs-label-fontWeight: var(--ds-typography-label-fontWeight);
+  
+  width: 100%;
+}
+
+.tabsList {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-padding-s);
+  border-bottom: 1px solid var(--ds-tabs-border-color);
+}
+
+.tabsTrigger {
+  display: flex;
+  align-items: center;
+  padding: var(--ds-space-padding-m) var(--ds-space-padding-l);
+  border-radius: var(--ds-radii-concept-m) var(--ds-radii-concept-m) 0 0;
+  font-size: var(--ds-tabs-label-fontSize);
+  font-weight: var(--ds-tabs-label-fontWeight);
+  line-height: var(--ds-tabs-label-lineHeight);
+  color: var(--ds-tabs-trigger-label-color);
+  background-color: var(--ds-tabs-trigger-background);
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.tabsTrigger:hover {
+  background-color: var(--ds-tabs-trigger-background-hover);
+}
+
+.tabsTrigger[data-state="active"] {
+  color: var(--ds-tabs-trigger-label-color-active);
+  background-color: var(--ds-tabs-trigger-background-active);
+  border-bottom-color: var(--ds-color-semantic-background-accent);
+}
+
+.tabsContent {
+  padding: var(--ds-space-padding-l);
+  color: var(--ds-tabs-content-label-color);
+  font-size: var(--ds-tabs-label-fontSize);
+  font-weight: var(--ds-tabs-label-fontWeight);
+  line-height: var(--ds-tabs-label-lineHeight);
+  outline: none;
+}
+
+.tabsContent[data-state="active"] {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

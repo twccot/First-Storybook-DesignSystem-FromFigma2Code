@@ -1,0 +1,31 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+import { ColorPaletteDisplay } from '../../.storybook/components/color-palette'
+import '../tokens/colors.css'
+
+<Meta title="Tokens/Colors" />
+
+# Colors
+
+Our color system uses a three-tier token structure:
+
+1. **Primitive Colors** - Base color values (never use directly in components)
+2. **Global Colors** - Semantic color scales for consistency
+3. **Semantic Colors** - Context-aware tokens for component usage
+
+## Primitive Colors
+
+Raw color values organized by hue. These should never be used directly in components.
+
+<ColorPaletteDisplay colorRange="primitive" />
+
+## Global Colors
+
+Color scales that reference primitive colors. Use these for consistent theming.
+
+<ColorPaletteDisplay colorRange="global" />
+
+## Semantic Colors
+
+Context-aware tokens for use in components. These provide meaning and intent.
+
+<ColorPaletteDisplay colorRange="semantic" />

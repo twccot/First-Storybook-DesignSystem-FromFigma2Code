@@ -1,0 +1,17 @@
+.layoutRoot {
+
+  --layout-max-width: 960px;
+
+  width: min(100%, var(--layout-max-width));
+  margin: 0 auto;
+  padding: var(--ds-space-concept-l, 24px) var(--ds-space-concept-m, 16px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-space-concept-m, 16px);
+}
+
+@media (max-width: 768px) {
+  .layoutRoot {
+    padding-inline: var(--ds-space-concept-s, 8px);
+  }
+}

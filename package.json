@@ -1,0 +1,63 @@
+{
+  "name": "super-design-system",
+  "version": "1.0.0",
+  "description": "A demo design system to showcase integrations and customizations of Storybook",
+  "main": "./dist/super-design-system.umd.js",
+  "module": "./dist/super-design-system.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/super-design-system.es.js",
+      "require": "./dist/super-design-system.umd.js"
+    },
+    "./styles.css": "./dist/super-design-system.css"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "npm run product",
+    "build": "tsc && vite build",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "product": "next dev",
+    "build-product": "next build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.2.2",
+    "@untitledui/icons": "^0.0.21",
+    "radix-ui": "^1.4.3",
+    "react": "^19.1.0",
+    "react-aria-components": "^1.16.0",
+    "react-dom": "^19.1.0",
+    "tailwind-merge": "^3.5.0",
+    "tailwindcss": "^4.2.2",
+    "tailwindcss-animate": "^1.0.7",
+    "tailwindcss-react-aria-components": "^2.0.1"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^4.0.0",
+    "@storybook/addon-a11y": "^9.1.10",
+    "@storybook/addon-docs": "^9.1.10",
+    "@storybook/addon-vitest": "^9.1.10",
+    "@storybook/react-vite": "^9.1.10",
+    "@svgr/webpack": "^8.1.0",
+    "@types/node": "^24.7.1",
+    "@types/react": "^19.2.2",
+    "@vitejs/plugin-react": "^5.0.4",
+    "@vitest/browser": "^3.2.4",
+    "@vitest/coverage-v8": "^3.2.4",
+    "next": "^15.1.0",
+    "playwright": "^1.56.0",
+    "storybook": "^9.1.10",
+    "storybook-addon-code-editor": "^5.0.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.9",
+    "vite-plugin-dts": "^4.5.4",
+    "vite-plugin-svgr": "^4.5.0",
+    "vitest": "^3.2.4"
+  }
+}

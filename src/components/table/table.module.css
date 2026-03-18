@@ -1,0 +1,47 @@
+.table {
+
+  --ds-table-border-color: var(--ds-color-global-neutral-800);
+  --ds-table-header-background: var(--ds-color-semantic-background-primary);
+  --ds-table-header-label-color: var(--ds-color-semantic-foreground-secondary);
+  --ds-table-cell-label-color: var(--ds-color-semantic-foreground-secondary);
+  
+  --ds-table-label-fontSize: var(--ds-typography-label-fontSize);
+  --ds-table-label-lineHeight: var(--ds-typography-label-lineHeight);
+  --ds-table-label-fontWeight: var(--ds-typography-label-fontWeight);
+  
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.tableHeader {
+  background-color: var(--ds-table-header-background);
+}
+
+.tableBody {
+}
+
+.tableRow {
+  border-bottom: 1px solid var(--ds-table-border-color);
+}
+
+.tableRow:last-child {
+  border-bottom: none;
+}
+
+.tableHead {
+  padding: var(--ds-space-padding-m) var(--ds-space-padding-l);
+  text-align: left;
+  font-size: var(--ds-table-label-fontSize);
+  font-weight: var(--ds-typography-global-fontWeight-bold);
+  line-height: var(--ds-table-label-lineHeight);
+  color: var(--ds-table-header-label-color);
+}
+
+.tableCell {
+  padding: var(--ds-space-padding-m) var(--ds-space-padding-l);
+  font-size: var(--ds-table-label-fontSize);
+  font-weight: var(--ds-table-label-fontWeight);
+  line-height: var(--ds-table-label-lineHeight);
+  color: var(--ds-table-cell-label-color);
+}

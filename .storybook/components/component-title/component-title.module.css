@@ -1,0 +1,12 @@
+@import '../../styles/foundation.css';
+
+.title {
+  font-family: var(--font-heading) !important;
+  color: var(--text-primary-light) !important;
+  font-size: var(--scale11) !important;
+  font-weight: var(--medium) !important;
+  letter-spacing: 0.82px;
+}
+
+
+

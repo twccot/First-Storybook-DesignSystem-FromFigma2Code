@@ -1,0 +1,16 @@
+@import '../../styles/foundation.css';
+
+.description {
+  display: flex;
+}
+
+.description p,
+.description ul,
+.description li {
+  font-family: var(--font-body) !important;
+  font-weight: var(--regular);
+  font-size: var(--scale4);
+  line-height: var(--scale7);
+  letter-spacing: 0.22px;
+}
+

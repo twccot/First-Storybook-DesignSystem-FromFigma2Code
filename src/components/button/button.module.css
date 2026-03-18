@@ -1,0 +1,49 @@
+.button {
+
+  /* Component Tokens */
+  --ds-button-background: var(--ds-color-semantic-background-accent);
+  --ds-button-background-hover: var(--ds-color-semantic-background-accent);
+  --ds-button-background-active: var(--ds-color-semantic-background-accent);
+  --ds-button-background-disabled: var(--ds-color-semantic-foreground-muted);
+  --ds-button-outline-focus: var(--ds-color-semantic-background-accent);
+
+  --ds-button-label-color: var(--ds-color-semantic-foreground-primary-inverted);
+  --ds-button-label-fontSize: var(--ds-typography-label-fontSize);
+  --ds-button-label-lineHeight: var(--ds-typography-label-lineHeight);
+  --ds-button-label-fontWeight: var(--ds-typography-label-fontWeight);
+  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  user-select: none;
+  padding: var(--ds-space-padding-m) var(--ds-space-padding-l);
+  border-radius: var(--ds-radii-concept-m);
+  border: 1px solid transparent;
+  background-color: var(--ds-button-background);
+  color: var(--ds-button-label-color);
+  font-size: var(--ds-button-label-fontSize);
+  font-weight: var(--ds-button-label-fontWeight);
+  line-height: var(--ds-button-label-lineHeight);
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.button:hover {
+  background-color: var(--ds-button-background-hover);
+}
+
+.button:active {
+  background-color: var(--ds-button-background-active);
+}
+
+.button:focus {
+  outline: 2px solid var(--ds-button-outline-focus);
+  outline-offset: 2px;
+}
+
+.button:disabled {
+  background-color: var(--ds-button-background-disabled);
+  opacity: 0.5;
+  cursor: not-allowed;
+}

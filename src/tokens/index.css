@@ -1,0 +1,9 @@
+@import './colors.css';
+@import './typography.css';
+@import './space.css';
+@import './radii.css';
+
+/* Set default font-family globally */
+body {
+  font-family: var(--ds-typography-global-fontFamily);
+}

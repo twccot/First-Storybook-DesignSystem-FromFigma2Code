@@ -1,0 +1,31 @@
+<style>
+    /**
+    The following code is used to hide the code demo and controls buttons in the sidebar.
+    There is no official way to customize the icons, this is why it is done via CSS. The icons are copy-pasted from the Storybook icon library.
+    Storybook icons documentation: https://main--64b56e737c0aeefed9d5e675.chromatic.com/?path=/docs/introduction--docs
+    **/
+    .sidebar-item a[href$='--code-demo'],
+    .sidebar-item a[href$='--controls'] {
+      position: relative;
+    }
+  
+    .sidebar-item a[href$='--code-demo'] div,
+    .sidebar-item a[href$='--controls'] div {
+      display: none;
+    }
+  
+    .sidebar-item a[href$='--code-demo']::before,
+    .sidebar-item a[href$='--controls']::before {
+      content: '';
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      vertical-align: middle;
+      background-size: contain;
+    }
+  
+    .sidebar-item a[href$='--controls']::before {
+      background-image: url('data:image/svg+xml;utf8,<svg width="14" height="14" viewBox="0 0 14 14" fill="rgb(34, 197, 94)" xmlns="http://www.w3.org/2000/svg"><path d="M10.5 1a.5.5 0 01.5.5V2h1.5a.5.5 0 010 1H11v.5a.5.5 0 01-1 0V3H1.5a.5.5 0 010-1H10v-.5a.5.5 0 01.5-.5zM1.5 11a.5.5 0 000 1H10v.5a.5.5 0 001 0V12h1.5a.5.5 0 000-1H11v-.5a.5.5 0 00-1 0v.5H1.5zM1 7a.5.5 0 01.5-.5H3V6a.5.5 0 011 0v.5h8.5a.5.5 0 010 1H4V8a.5.5 0 01-1 0v-.5H1.5A.5.5 0 011 7z"></path></svg>');
+    }
+
+</style>

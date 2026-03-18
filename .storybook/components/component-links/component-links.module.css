@@ -1,0 +1,32 @@
+@import '../../styles/foundation.css';
+
+.linksContainer {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: var(--space-5);
+}
+
+.link {
+  font-family: var(--font-body);
+  color: #0066cc;
+  font-size: var(--scale4);
+  line-height: var(--scale7);
+  letter-spacing: 0.22px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link.disabled {
+  color: #999999;
+  text-decoration: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+.verticalDivider {
+  width: 1px;
+  height: 1.375rem;
+  background-color: #e0e0e0;
+}
+

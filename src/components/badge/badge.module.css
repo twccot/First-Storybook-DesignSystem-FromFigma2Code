@@ -1,0 +1,40 @@
+.badge {
+  
+  --ds-badge-background: var(--ds-color-semantic-background-primary);
+  --ds-badge-border-color: var(--ds-color-semantic-foreground-muted);
+  --ds-badge-label-color: var(--ds-color-semantic-foreground-secondary);
+  --ds-badge-done-icon-color: var(--ds-color-semantic-foreground-success);
+
+  --ds-badge-label-fontSize: var(--ds-typography-label-fontSize);
+  --ds-badge-label-lineHeight: var(--ds-typography-label-lineHeight);
+  --ds-badge-label-fontWeight: var(--ds-typography-label-fontWeight);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ds-space-padding-s);
+  padding: var(--ds-space-padding-s) var(--ds-space-padding-m);
+  border-radius: var(--ds-radii-concept-m);
+  background-color: var(--ds-badge-background);
+  border: 1px solid var(--ds-badge-border-color);
+  color: var(--ds-badge-label-color);
+  font-size: var(--ds-badge-label-fontSize);
+  font-weight: var(--ds-badge-label-fontWeight);
+  line-height: var(--ds-badge-label-lineHeight);
+  white-space: nowrap;
+}
+
+.badgeIcon {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.badgeIcon--in-progress {
+  stroke: var(--ds-color-semantic-foreground-muted);
+}
+
+.badgeIcon--done {
+  fill: var(--ds-badge-done-icon-color);
+}

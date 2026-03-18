@@ -1,0 +1,109 @@
+.alert {
+  --ds-alert-background: var(--ds-color-semantic-background-primary);
+  --ds-alert-accent: var(--ds-color-global-information-700);
+  --ds-alert-foreground: var(--ds-color-semantic-foreground-primary);
+
+  --ds-alert-fontFamily: var(--ds-typography-global-fontFamily);
+  --ds-alert-fontSize: var(--ds-typography-global-fontSize-base);
+  --ds-alert-lineHeight: var(--ds-typography-global-lineHeight-normal);
+  --ds-alert-fontWeight: var(--ds-typography-global-fontWeight-normal);
+
+  display: flex;
+  align-items: flex-start;
+  gap: var(--ds-space-padding-m);
+  padding: var(--ds-space-padding-l);
+  padding-left: var(--ds-space-padding-m);
+  border-radius: var(--ds-radii-concept-m);
+  background-color: var(--ds-alert-background);
+  color: var(--ds-alert-foreground);
+  font-family: var(--ds-alert-fontFamily);
+  font-size: var(--ds-alert-fontSize);
+  font-weight: var(--ds-alert-fontWeight);
+  line-height: var(--ds-alert-lineHeight);
+  position: relative;
+}
+
+.alertAccent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  border-radius: var(--ds-radii-concept-m) 0 0 var(--ds-radii-concept-m);
+  background-color: var(--ds-alert-accent);
+}
+
+.alertIconWrap {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: var(--ds-space-global-x0);
+}
+
+.alertIcon {
+  width: 20px;
+  height: 20px;
+  color: var(--ds-alert-accent);
+}
+
+.alertContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.alertClose {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  color: var(--ds-color-semantic-foreground-muted);
+  cursor: pointer;
+  border-radius: var(--ds-radii-concept-s);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.alertClose:hover {
+  background-color: var(--ds-color-semantic-background-muted);
+  color: var(--ds-color-semantic-foreground-primary);
+}
+
+.alertClose:focus {
+  outline: 2px solid var(--ds-color-semantic-background-accent);
+  outline-offset: 2px;
+}
+
+.alertClose svg {
+  width: 16px;
+  height: 16px;
+}
+
+.alert--info {
+  --ds-alert-background: var(--ds-color-semantic-background-info);
+  --ds-alert-accent: var(--ds-color-global-information-700);
+  --ds-alert-foreground: var(--ds-color-semantic-foreground-information);
+}
+
+.alert--warning {
+  --ds-alert-background: var(--ds-color-semantic-background-warning);
+  --ds-alert-accent: var(--ds-color-global-warning-700);
+  --ds-alert-foreground: var(--ds-color-semantic-foreground-warning);
+}
+
+.alert--success {
+  --ds-alert-background: var(--ds-color-semantic-background-success);
+  --ds-alert-accent: var(--ds-color-global-success-700);
+  --ds-alert-foreground: var(--ds-color-semantic-foreground-success);
+}
+
+.alert--danger {
+  --ds-alert-background: var(--ds-color-semantic-background-danger);
+  --ds-alert-accent: var(--ds-color-global-danger-700);
+  --ds-alert-foreground: var(--ds-color-semantic-foreground-danger);
+}

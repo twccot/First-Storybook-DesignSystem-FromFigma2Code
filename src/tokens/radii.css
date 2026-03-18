@@ -1,0 +1,19 @@
+:root {
+  /* Tier 1 */
+  --ds-radii-global-x0: 0px;
+  --ds-radii-global-x1: 2px;
+  --ds-radii-global-x2: 4px;
+  --ds-radii-global-x3: 8px;
+  --ds-radii-global-x4: 12px;
+  --ds-radii-global-x5: 16px;
+  --ds-radii-global-xround: 50%;
+
+  /* Tier 2 */
+  --ds-radii-concept-none: var(--ds-radii-global-x0);
+  --ds-radii-concept-s: var(--ds-radii-global-x1);
+  --ds-radii-concept-m: var(--ds-radii-global-x2);
+  --ds-radii-concept-l: var(--ds-radii-global-x3);
+  --ds-radii-concept-xl: var(--ds-radii-global-x4);
+  --ds-radii-concept-round: var(--ds-radii-global-xround);
+
+}
