@@ -1,16 +1,14 @@
 import { Meta } from '@storybook/addon-docs/blocks'
 import { SpacePaletteDisplay } from '../../.storybook/components/space-palette'
-import '../tokens/space.css'
 
-<Meta title="Tokens/Space" />
+<Meta title="Tokens/Spacing" />
 
-# Space
+# Spacing
 
-## Global Space
+Tailwind v4 uses a single `--spacing` multiplier (4px base unit).
+All spacing values are computed as `calc(var(--spacing) * n)`.
 
-<SpacePaletteDisplay spaceRange="global" />
+## Shadow Scale
 
-## Padding Space
-
-<SpacePaletteDisplay spaceRange="padding" />
+<SpacePaletteDisplay spaceRange="shadow" />
 

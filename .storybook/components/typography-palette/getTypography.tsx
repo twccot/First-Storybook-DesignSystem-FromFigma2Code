@@ -1,44 +1,4 @@
-interface StyleRule extends CSSRule {
-  type: number
-  style: CSSStyleDeclaration
-}
-
-interface CustomStyleSheet extends StyleSheet {
-  href: string | null
-  cssRules: CSSRuleList
-}
-
-const isStyleRule = (rule: CSSRule): rule is StyleRule => rule.type === 1
-
-const isSameDomain = (styleSheet: CustomStyleSheet): boolean => {
-  if (!styleSheet.href) {
-    return true
-  }
-
-  return styleSheet.href.indexOf(window.location.origin) === 0
-}
-
-type TypographyProperty = [string, string] // [propertyName, propertyValue]
-
-const getCSSCustomPropIndex = (): TypographyProperty[] =>
-  [...document.styleSheets].filter(isSameDomain).reduce<TypographyProperty[]>(
-    (finalArr, sheet) =>
-      finalArr.concat(
-        [...(sheet as CustomStyleSheet).cssRules]
-          .filter(isStyleRule)
-          .reduce<TypographyProperty[]>((propValArr, rule) => {
-            const props = [...rule.style]
-              .map(
-                (propName) =>
-                  [propName.trim(), rule.style.getPropertyValue(propName).trim()] as TypographyProperty
-              )
-              .filter(([propName]) => propName.indexOf('--ds-typography-') === 0)
-
-            return [...propValArr, ...props]
-          }, [])
-      ),
-    []
-  )
+type TypographyProperty = [string, string]
 
 interface TypographyVariables {
   [category: string]: {
@@ -46,30 +6,57 @@ interface TypographyVariables {
   }
 }
 
+const collectProps = (rules: CSSRuleList, styles: CSSStyleDeclaration, props: TypographyProperty[]) => {
+  for (const rule of rules) {
+    if (rule instanceof CSSStyleRule) {
+      for (const prop of rule.style) {
+        const name = prop.trim()
+        if (name.startsWith('--') ) {
+          const value = styles.getPropertyValue(name).trim()
+          if (value) props.push([name, value])
+        }
+      }
+    }
+    if ('cssRules' in rule && (rule as CSSGroupingRule).cssRules) {
+      collectProps((rule as CSSGroupingRule).cssRules, styles, props)
+    }
+  }
+}
+
+const getCSSCustomPropIndex = (): TypographyProperty[] => {
+  const styles = getComputedStyle(document.documentElement)
+  const props: TypographyProperty[] = []
+  for (const sheet of document.styleSheets) {
+    try {
+      collectProps(sheet.cssRules, styles, props)
+    } catch {
+      // Skip cross-origin stylesheets
+    }
+  }
+  return props
+}
+
 export const getTypography = (typographyRange: string): TypographyVariables => {
   const typographyArray = getCSSCustomPropIndex()
   const typographyVariables: TypographyVariables = {}
-  const prefix = `--ds-typography-${typographyRange}-`
+  const prefix = `--${typographyRange}-`
 
   typographyArray.forEach(([varName, varValue]) => {
-    // Only process variables that match the typography range prefix
-    if (!varName.startsWith(prefix)) {
-      return
-    }
+    if (!varName.startsWith(prefix)) return
 
     const strippedName = varName.replace(prefix, '')
     const parts = strippedName.split('-')
-    
-    if (parts.length >= 2) {
-      const category = parts[0] // fontSize, lineHeight, fontWeight
-      const variant = parts.slice(1).join('-') // small, base, large, etc.
 
+    if (parts.length >= 2) {
+      const category = parts[0]
+      const variant = parts.slice(1).join('-')
       if (category && variant) {
-        if (!typographyVariables[category]) {
-          typographyVariables[category] = {}
-        }
+        if (!typographyVariables[category]) typographyVariables[category] = {}
         typographyVariables[category][variant] = varValue
       }
+    } else if (parts.length === 1 && parts[0]) {
+      if (!typographyVariables['base']) typographyVariables['base'] = {}
+      typographyVariables['base'][parts[0]] = varValue
     }
   })
 
