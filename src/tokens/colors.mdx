@@ -1,31 +1,43 @@
 import { Meta } from '@storybook/addon-docs/blocks'
 import { ColorPaletteDisplay } from '../../.storybook/components/color-palette'
-import '../tokens/colors.css'
 
 <Meta title="Tokens/Colors" />
 
 # Colors
 
-Our color system uses a three-tier token structure:
+Untitled UI uses a two-tier color token structure:
 
-1. **Primitive Colors** - Base color values (never use directly in components)
-2. **Global Colors** - Semantic color scales for consistency
-3. **Semantic Colors** - Context-aware tokens for component usage
+1. **Primitive Colors** — Raw color values by hue. Never use directly in components.
+2. **Semantic Colors** — Context-aware tokens used in components for text, backgrounds, borders, and foregrounds.
 
-## Primitive Colors
+## Brand
 
-Raw color values organized by hue. These should never be used directly in components.
+<ColorPaletteDisplay colorRange="brand" />
 
-<ColorPaletteDisplay colorRange="primitive" />
+## Gray
 
-## Global Colors
+<ColorPaletteDisplay colorRange="gray" />
 
-Color scales that reference primitive colors. Use these for consistent theming.
+## Error
 
-<ColorPaletteDisplay colorRange="global" />
+<ColorPaletteDisplay colorRange="error" />
 
-## Semantic Colors
+## Warning
 
-Context-aware tokens for use in components. These provide meaning and intent.
+<ColorPaletteDisplay colorRange="warning" />
 
-<ColorPaletteDisplay colorRange="semantic" />
+## Success
+
+<ColorPaletteDisplay colorRange="success" />
+
+## Semantic: Backgrounds
+
+<ColorPaletteDisplay colorRange="bg" />
+
+## Semantic: Text
+
+<ColorPaletteDisplay colorRange="text" />
+
+## Semantic: Borders
+
+<ColorPaletteDisplay colorRange="border" />
