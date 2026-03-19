@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { PropsCategory } from '@/.storybook/constants'
+import { PropsCategory } from '#storybook/constants'
 
-import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '@/src/components';
+import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '@/components';
 
 
 const meta: Meta<typeof Table> = {

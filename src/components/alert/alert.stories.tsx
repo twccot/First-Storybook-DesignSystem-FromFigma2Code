@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { PropsCategory } from "@/.storybook/constants";
+import { PropsCategory } from '#storybook/constants';
 
-import { Alert } from "@/src/components";
+import { Alert } from "@/components";
 
 const meta: Meta<typeof Alert> = {
   title: "Components/Alert",

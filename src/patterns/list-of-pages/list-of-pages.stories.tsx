@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
-import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '@/src/components';
-import { Badge } from '@/src/components';
+import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '@/components';
+import { Badge } from '@/components';
 // @ts-ignore - JSON import from data directory
 import pagesData from '@/data/list-of-pages.data.json';
 

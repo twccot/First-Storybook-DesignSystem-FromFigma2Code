@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { PropsCategory } from '@/.storybook/constants'
+import { PropsCategory } from '#storybook/constants'
 
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/src/components';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components';
 
 
 const meta: Meta<typeof Tabs> = {

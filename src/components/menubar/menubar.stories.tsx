@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { PropsCategory } from '@/.storybook/constants'
+import { PropsCategory } from '#storybook/constants'
 
 import { 
   Menubar, 
   MenubarItem
-} from '@/src/components';
+} from '@/components';
 
 
 const meta: Meta<typeof Menubar> = {

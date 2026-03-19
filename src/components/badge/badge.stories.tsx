@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { PropsCategory } from '@/.storybook/constants'
+import { PropsCategory } from '#storybook/constants'
 
-import { Badge } from '@/src/components';
+import { Badge } from '@/components';
 
 
 const meta: Meta<typeof Badge> = {

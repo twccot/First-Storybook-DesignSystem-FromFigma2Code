@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
-import { Header, Logo, Avatar } from '@/src/components';
-import { Menubar, MenubarItem } from '@/src/components';
+import { Header, Logo, Avatar } from '@/components';
+import { Menubar, MenubarItem } from '@/components';
 
 const meta: Meta = {
   title: 'Patterns/Header',

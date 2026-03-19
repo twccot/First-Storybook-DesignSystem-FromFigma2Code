@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
-import { Header, Layout, Logo, Avatar } from '@/src/components';
-import { Menubar, MenubarItem } from '@/src/components';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/src/components';
-import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '@/src/components';
-import { Badge } from '@/src/components';
+import { Header, Layout, Logo, Avatar } from '@/components';
+import { Menubar, MenubarItem } from '@/components';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components';
+import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '@/components';
+import { Badge } from '@/components';
 // @ts-ignore - JSON import from data directory
-import pagesData from '@/data/list-of-pages.data.json';
+import pagesData from '../../data/list-of-pages.data.json';
 
 interface Page {
   id: number;
