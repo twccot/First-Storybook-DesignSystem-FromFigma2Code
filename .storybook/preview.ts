@@ -1,10 +1,50 @@
 import type { Preview } from '@storybook/react-vite'
 import { DocsPage } from './components/docs-page/docs-page'
 import { argTypesEnhancer } from './utils/propTypesCategorizer'
+import React, { useEffect } from 'react'
 
 import '@/styles/globals.css';
 
 const preview: Preview = {
+  globalTypes: {
+    theme: {
+      description: 'Global theme for components',
+      toolbar: {
+        title: 'Theme',
+        icon: 'circlehollow',
+        items: [
+          { value: 'light', title: 'Light', icon: 'sun' },
+          { value: 'dark', title: 'Dark', icon: 'moon' },
+        ],
+        dynamicTitle: true,
+      },
+    },
+  },
+  initialGlobals: {
+    theme: 'light',
+  },
+  decorators: [
+    (Story, context) => {
+      const theme = context.globals.theme || 'light'
+
+      useEffect(() => {
+        const isDark = theme === 'dark'
+        document.documentElement.classList.toggle('dark-mode', isDark)
+        document.body.classList.toggle('dark-mode', isDark)
+
+        // Also target parent iframe
+        try {
+          const parentDoc = window.parent.document
+          parentDoc.documentElement.classList.toggle('dark-mode', isDark)
+          parentDoc.body.classList.toggle('dark-mode', isDark)
+        } catch (e) {
+          // cross-origin, ignore
+        }
+      }, [theme])
+
+      return React.createElement(Story)
+    },
+  ],
   parameters: {
     controls: {
       matchers: {
