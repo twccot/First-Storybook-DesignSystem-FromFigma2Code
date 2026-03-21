@@ -1,27 +1,24 @@
-import type { HTMLAttributes } from 'react'
-import React from 'react'
+"use client";
 
-import { cx } from '@/utils/cx'
+import type { HTMLAttributes } from "react";
 
-type DotSize = 'xs' | 'sm' | 'md'
+const sizes = {
+    sm: {
+        wh: 8,
+        c: 4,
+        r: 2.5,
+    },
+    md: {
+        wh: 10,
+        c: 5,
+        r: 4,
+    },
+};
 
-interface DotProps extends HTMLAttributes<HTMLSpanElement> {
-  size?: DotSize
-}
-
-const sizeClassName: Record<DotSize, string> = {
-  xs: 'w-1 h-1',
-  sm: 'w-1.5 h-1.5',
-  md: 'w-2 h-2',
-}
-
-export const Dot = ({ size = 'md', className, ...props }: DotProps) => {
-  return (
-    <span
-      aria-hidden="true"
-      className={cx('inline-block rounded-full bg-current', sizeClassName[size], className)}
-      {...props}
-    />
-  )
-}
-
+export const Dot = ({ size = "md", ...props }: HTMLAttributes<HTMLOrSVGElement> & { size?: "sm" | "md" }) => {
+    return (
+        <svg width={sizes[size].wh} height={sizes[size].wh} viewBox={`0 0 ${sizes[size].wh} ${sizes[size].wh}`} fill="none" {...props}>
+            <circle cx={sizes[size].c} cy={sizes[size].c} r={sizes[size].r} fill="currentColor" stroke="currentColor" />
+        </svg>
+    );
+};

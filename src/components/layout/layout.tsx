@@ -1,5 +1,6 @@
 import React from "react";
 import cm from "./layout.module.css";
+import "@/styles/globals.css";
 
 export interface LayoutProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
