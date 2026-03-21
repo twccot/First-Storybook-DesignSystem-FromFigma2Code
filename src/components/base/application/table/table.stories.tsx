@@ -3,7 +3,7 @@ import React from 'react'
 import { Table, TableCard } from './table'
 
 const meta: Meta<typeof Table> = {
-  title: 'Base/Table',
+  title: 'Components/Table',
   component: Table,
   parameters: { layout: 'padded' },
   tags: ['autodocs'],

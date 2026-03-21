@@ -3,7 +3,7 @@ import React from 'react'
 import { Input } from './input'
 
 const meta: Meta<typeof Input> = {
-  title: 'Base/Input',
+  title: 'Components/Input',
   component: Input,
   parameters: { layout: 'centered' },
   tags: ['autodocs'],

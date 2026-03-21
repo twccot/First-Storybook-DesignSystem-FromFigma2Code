@@ -4,7 +4,7 @@ import { Badge, BadgeWithDot, BadgeWithIcon } from './badges'
 import { Check, ArrowUp } from '@untitledui/icons'
 
 const meta: Meta<typeof Badge> = {
-  title: 'Base/Badge',
+  title: 'Components/Badge',
   component: Badge,
   parameters: {
     layout: 'centered',

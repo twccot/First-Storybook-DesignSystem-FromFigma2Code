@@ -3,7 +3,7 @@ import React from 'react'
 import { Avatar } from './avatar'
 
 const meta: Meta<typeof Avatar> = {
-  title: 'Base/Avatar',
+  title: 'Components/Avatar',
   component: Avatar,
   parameters: {
     layout: 'centered',

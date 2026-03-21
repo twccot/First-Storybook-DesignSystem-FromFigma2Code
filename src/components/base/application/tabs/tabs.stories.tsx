@@ -3,7 +3,7 @@ import React from 'react'
 import { Tabs, TabList, TabPanel } from './tabs'
 
 const meta: Meta<typeof Tabs> = {
-  title: 'Base/Tabs',
+  title: 'Components/Tabs',
   component: Tabs,
   parameters: { layout: 'centered' },
   tags: ['autodocs'],

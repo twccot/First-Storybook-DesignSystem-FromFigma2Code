@@ -22,8 +22,23 @@ const preview: Preview = {
 
     options: {
       storySort: {
-        order: ['Tokens', 'Components', 'Patterns', 'Templates', '*'],
-      }
+        order: [
+          'Tokens',
+          'Components',
+          [
+            'Avatar',
+            'Badge',
+            'Button',
+            'Input',
+            'Metrics',
+            'Pagination',
+            'Table',
+            'Tabs',
+          ],
+          'Templates',
+          '*',
+        ],
+      },
     },
 
     docs: {

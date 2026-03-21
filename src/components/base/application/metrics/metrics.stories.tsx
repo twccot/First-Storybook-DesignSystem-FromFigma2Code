@@ -3,7 +3,7 @@ import React from 'react'
 import { MetricsSimple as Metric } from './metrics'
 
 const meta: Meta<typeof Metric> = {
-  title: 'Base/Metrics',
+  title: 'Components/Metrics',
   component: Metric,
   parameters: {
     layout: 'centered',

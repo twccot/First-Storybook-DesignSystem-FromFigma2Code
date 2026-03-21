@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { PaginationCardMinimal } from './pagination'
 
 const meta: Meta<typeof PaginationCardMinimal> = {
-  title: 'Base/Pagination',
+  title: 'Components/Pagination',
   component: PaginationCardMinimal,
   parameters: { layout: 'centered' },
   tags: ['autodocs'],
