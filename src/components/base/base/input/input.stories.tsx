@@ -23,7 +23,7 @@ type Story = StoryObj<typeof Input>
 export const Default: Story = {
   args: {
     label: 'Email',
-    placeholder: 'olivia@untitledui.com',
+    placeholder: 'name@company.com',
     size: 'sm',
   },
 }
@@ -31,7 +31,7 @@ export const Default: Story = {
 export const WithHint: Story = {
   args: {
     label: 'Email',
-    placeholder: 'olivia@untitledui.com',
+    placeholder: 'name@company.com',
     hint: 'This is a hint text to help user.',
     size: 'sm',
   },
@@ -40,7 +40,7 @@ export const WithHint: Story = {
 export const WithError: Story = {
   args: {
     label: 'Email',
-    placeholder: 'olivia@untitledui.com',
+    placeholder: 'name@company.com',
     hint: 'This email is already taken.',
     isInvalid: true,
     size: 'sm',
@@ -50,7 +50,7 @@ export const WithError: Story = {
 export const Disabled: Story = {
   args: {
     label: 'Email',
-    placeholder: 'olivia@untitledui.com',
+    placeholder: 'name@company.com',
     isDisabled: true,
     size: 'sm',
   },
@@ -59,7 +59,7 @@ export const Disabled: Story = {
 export const Medium: Story = {
   args: {
     label: 'Email',
-    placeholder: 'olivia@untitledui.com',
+    placeholder: 'name@company.com',
     size: 'md',
   },
 }

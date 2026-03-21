@@ -13,10 +13,10 @@ export default meta
 type Story = StoryObj<typeof Table>
 
 const tableData = [
-  { name: 'Olivia Rhye', email: 'olivia@untitledui.com', status: 'Active', role: 'Product Designer' },
-  { name: 'Phoenix Baker', email: 'phoenix@untitledui.com', status: 'Pending', role: 'Frontend Dev' },
-  { name: 'Lana Steiner', email: 'lana@untitledui.com', status: 'Active', role: 'Engineering Manager' },
-  { name: 'Demi Wilkinson', email: 'demi@untitledui.com', status: 'Inactive', role: 'Product Manager' },
+  { name: 'Sarah Chen', email: 'sarah@acme.com', status: 'Active', role: 'Product Designer' },
+  { name: 'Phoenix Baker', email: 'phoenix@acme.com', status: 'Pending', role: 'Frontend Dev' },
+  { name: 'Lana Steiner', email: 'lana@acme.com', status: 'Active', role: 'Engineering Manager' },
+  { name: 'Demi Wilkinson', email: 'demi@acme.com', status: 'Inactive', role: 'Product Manager' },
 ]
 
 export const Default: Story = {

@@ -31,49 +31,49 @@ import { ProgressBar } from "@/components/base/base/progress-indicators/progress
 
 const pageData = [
     {
-        page: "untitledui.com",
+        page: "acme.com",
         sessions: 4288,
         avgTime: 84,
         percentageOfTotal: 62.4,
         folder: "General",
     },
     {
-        page: "untitledui.com/free-icons",
+        page: "acme.com/free-icons",
         sessions: 582,
         avgTime: 68,
         percentageOfTotal: 8.2,
         folder: "General",
     },
     {
-        page: "untitledui.com/icons",
+        page: "acme.com/icons",
         sessions: 464,
         avgTime: 72,
         percentageOfTotal: 7.6,
         folder: "General",
     },
     {
-        page: "untitledui.com/components",
+        page: "acme.com/components",
         sessions: 446,
         avgTime: 142,
         percentageOfTotal: 7.2,
         folder: "General",
     },
     {
-        page: "untitledui.com/pricing",
+        page: "acme.com/pricing",
         sessions: 382,
         avgTime: 48,
         percentageOfTotal: 7.0,
         folder: "General",
     },
     {
-        page: "untitledui.com/faqs",
+        page: "acme.com/faqs",
         sessions: 326,
         avgTime: 56,
         percentageOfTotal: 6.4,
         folder: "General",
     },
     {
-        page: "untitledui.com/blog",
+        page: "acme.com/blog",
         sessions: 262,
         avgTime: 74,
         percentageOfTotal: 5.4,
@@ -185,7 +185,7 @@ export const Dashboard02 = () => {
                     },
                     {
                         label: "Open in browser",
-                        href: "https://www.untitledui.com/",
+                        href: "https://www.acme.com/",
                         icon: LayoutAlt01,
                     },
                 ]}

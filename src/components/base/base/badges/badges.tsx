@@ -277,7 +277,7 @@ export const BadgeWithFlag = <T extends BadgeTypes>(props: BadgeWithFlagProps<T>
 
     return (
         <span className={cx(colors.common, sizes[type][size], colors.styles[color].root)}>
-            <img src={`https://www.untitledui.com/images/flags/${flag}.svg`} className="size-4 max-w-none rounded-full" alt={`${flag} flag`} />
+            <img src={`https://flagcdn.com/16x12/${flag.toLowerCase()}.png`} className="size-4 max-w-none rounded-full" alt={`${flag} flag`} />
             {children}
         </span>
     );
